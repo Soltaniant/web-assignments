@@ -5,11 +5,21 @@
     --bg-color: #f2f2f2;
     --box-color: white;
     --border-radius: .7rem;
-    --light-dark-color: rgb(168, 168, 168);
+    --text-color: black;
+    --inactive-text-color: rgb(59, 55, 55);
 }
 
+[data-theme="dark"] {
+    --primary-color: rgb(152, 109, 227);
+    --bg-color: #252525;
+    --box-color: rgb(63, 63, 63);
+    --border-radius: .7rem;
+    --text-color: rgb(243, 243, 243);
+    --inactive-text-color: rgb(128, 128, 128);
+  }
+
 body {
-    
+    color: var(--text-color);
     background-color: var(--bg-color);
     justify-content: center;
     font-family: "Vazirmatn", serif;
@@ -35,7 +45,6 @@ body {
 
 header{
     margin-bottom: 3rem;
-    /* border-radius: var(--border-radius); */
     text-align: center;
 }
 
@@ -113,7 +122,7 @@ li {
 
 li a {
     display: block;
-    color: rgb(59, 55, 55);
+    color: var(--inactive-text-color);
     text-align: center;
     padding: 1rem;
     text-decoration: none;

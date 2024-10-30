@@ -42,7 +42,7 @@ postTags.forEach(element => {
     let postContainer = document.createElement("div");
     let postTitle = document.createElement("h2");
     let postContent = document.createElement("article");
-    
+
     postTitle.textContent = title;
     postContent.textContent = content;
 
@@ -60,3 +60,18 @@ postTags.forEach(element => {
 // ideas: labels and category of post, add date for each post + black dark footer as:  https://dribbble.com/shots/24565936-Minimal-blog-Untitled-UI
 // https://animated-fluent-emoji.vercel.app/
 
+
+function toggleDarkMode() {
+    const body = document.body;
+    const buttonDarkMode = document.getElementById('toggleDarkMode');
+    const dataTheme = body.getAttribute('data-theme');
+
+    console.log(buttonDarkMode, dataTheme)
+    if (dataTheme === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        buttonDarkMode.textContent = 'حالت شب';
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        buttonDarkMode.textContent = 'حالت روز';
+    }
+}
